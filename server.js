@@ -11,8 +11,8 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var port = process.env.PORT || 8080;        // set our port
-
+var port =  process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8080;        // set our port
+app.set('ip', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
 // ROUTES FOR OUR API
 // =============================================================================
 var router = express.Router();              // get an instance of the express Router
