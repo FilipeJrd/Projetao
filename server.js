@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 var port =  process.env.OPENSHIFT_NODEJS_PORT || 8080;        // set our port
+var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 
 // ROUTES FOR OUR API
 // =============================================================================
@@ -66,5 +67,5 @@ app.use('/api', router);
 // START THE SERVER
 // =============================================================================
 
-app.listen(port);
+app.listen(port,ipaddress);
 console.log('Magic happens on port ' + port);
