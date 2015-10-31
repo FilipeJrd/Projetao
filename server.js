@@ -32,6 +32,11 @@ router.get('/foodtrucks', function(req, res, next) {
     next();
 });
 
+router.post('/ft',function(req,res,next){
+	res.json(req.body);
+	next();
+});
+
 // more routes for our API will happen here
 
 // REGISTER OUR ROUTES -------------------------------
