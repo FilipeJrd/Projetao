@@ -24,7 +24,6 @@ db.on('error', console.error);
 
 
 var ftSchema = new mongoose.Schema({
-    collection: 'Foodtrucks',
     nome: String,
     local: String
 });
