@@ -18,7 +18,7 @@ var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 // ROUTES FOR OUR API
 // =============================================================================
 //mongoose.connect('mongodb://localhost/projetao');
-mongoose.connect('mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT');
+mongoose.connect('mongodb://admin:YSJip3mWHEcr@$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/projetaotestes');
 var db =  mongoose.connection;
 db.on('error', console.error);
 
