@@ -12,8 +12,8 @@ var util = require('util');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var ipaddr = process.env.OPENSHIFT_INTERNAL_IP;
-var port = process.env.PORT || process.env.OPENSHIFT_INTERNAL_PORT || 9000;
+var ipaddr = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
+var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
 // ROUTES FOR OUR API
 // =============================================================================
