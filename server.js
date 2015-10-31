@@ -16,7 +16,8 @@ var port =  process.env.PORT || 8080;        // set our port
 
 // ROUTES FOR OUR API
 // =============================================================================
-mongoose.connect('mongodb://localhost/projetao');
+//mongoose.connect('mongodb://localhost/projetao');
+mongoose.connect('mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/');
 var db =  mongoose.connection;
 db.on('error', console.error);
 
