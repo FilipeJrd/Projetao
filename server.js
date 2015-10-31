@@ -18,7 +18,7 @@ var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 // ROUTES FOR OUR API
 // =============================================================================
 //mongoose.connect('mongodb://localhost/projetao');
-mongoose.connect('mongodb://admin:YSJip3mWHEcr@$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/projetaotestes');
+mongoose.connect('mongodb://admin:YSJip3mWHEcr@$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/projetaotestes?authSource=admin');
 var db =  mongoose.connection;
 db.on('error', console.error);
 
