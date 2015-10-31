@@ -18,12 +18,13 @@ var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 // ROUTES FOR OUR API
 // =============================================================================
 //mongoose.connect('mongodb://localhost/projetao');
-mongoose.connect('mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/projetao');
+mongoose.connect('mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT');
 var db =  mongoose.connection;
 db.on('error', console.error);
 
 
 var ftSchema = new mongoose.Schema({
+    collection: 'Foodtrucks',
     nome: String,
     local: String
 });
